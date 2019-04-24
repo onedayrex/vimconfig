@@ -27,6 +27,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'iamcco/sran.nvim', { 'do': { -> sran#util#install() } }
 Plug 'iamcco/clock.nvim'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -84,3 +86,22 @@ map <leader>nf :NERDTreeFind<cr>
 """"""""""""""""""""""""""""""""""""
 " auto enable when neovim start
 let g:clockn_enable = 1
+
+""""""""""""""""""""""""""""""
+" => bufExplorer plugin
+""""""""""""""""""""""""""""""
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+map <leader>o :BufExplorer<cr>
+
+
+""""""""""""""""""""""""""""""
+" => CTRL-P
+""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 0 
+let g:ctrlp_map = '<c-f>'
+map <leader>j :CtrlP<cr>
+map <c-b> :CtrlPBuffer<cr>
+let g:ctrlp_max_height = 20
