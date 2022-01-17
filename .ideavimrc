@@ -1,0 +1,65 @@
+" custom map-key for intellij
+" author: stanhe
+
+let mapleader=","
+" change tab,replace by C+M+h/l in my studio settings
+noremap <leader>l gt
+noremap <leader>h gT
+noremap <leader>b :action Back<CR>
+noremap <leader>f :action Forward<CR>
+noremap <leader>v :action VimVisualToggleBlockMode<CR>
+noremap <leader>af :action FileStructurePopup<CR>
+noremap <leader>sf :action ShowFilePath<CR>
+
+" actions gc and gf more convenient,ga replace by C+M+f
+noremap	<A-f> :action GotoFile<CR>
+noremap	<leader>xf :action GotoFile<CR>
+noremap <A-c> :action GotoClass<CR>
+noremap <leader>gc :action GotoClass<CR>
+noremap <leader>gf :action GotoFile<CR>
+noremap <leader>ga :action GotoAction<CR>
+noremap <leader>gd :action GotoDeclaration<CR>
+noremap <leader>gi :action GotoImplementation<CR>
+noremap <leader>gs :action GotoSuperMethod<CR>
+noremap <leader>gt :action GotoTest<CR>
+
+" windows
+noremap <leader>xr :action Run <CR>
+noremap <leader>sv :action VimWindowSplitVertical <CR>
+noremap <leader>sh :action VimWindowSplitHorizontal <CR>
+noremap <leader>x0 :action VimWindowClose <CR>
+noremap <leader>xq :action VimWindowClose <CR>
+noremap <leader>xl :action VimWindowRight <CR>
+noremap <leader>xh :action VimWindowLeft <CR>
+noremap <leader>xj :action VimWindowDown <CR>
+noremap <leader>xk :action VimWindowUp <CR>
+noremap <leader>x1 :action VimWindowOnly <CR>
+
+
+
+" search
+set incsearch
+set ignorecase smartcase
+set hls
+nnoremap <Leader>sc :nohlsearch<CR>
+set clipboard+=unnamed
+
+set surround
+
+" plug
+Plug 'preservim/nerdtree'
+Plug 'vim-multiple-cursors'
+" cursors
+" <A-n> select next
+" <A-x> select next skip
+" <A-p> undo select
+
+" NERDTree
+noremap <leader>p :NERDTree<CR>
+
+" Press `,f` to activate AceJump
+noremap <leader>f :action AceAction<CR>
+" Press `F` to activate Target Mode
+noremap <leader>F :action AceTargetAction<CR>
+" Press `g` to activate Line Mode
+noremap <leader>al :action AceLineAction<CR>
